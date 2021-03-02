@@ -25,5 +25,12 @@ class Api::SkateSpotsController < ApplicationController
 
   def patch
     @spot = Spot.find(params[:id])
+    @spot.name = params[:name] || @spot.name
+    @spot.location = params[:location] || @spot.location
+    @spot.rating = params[:rating] || @spot.rating
+    @spot.owned_by = params[:owned_by] || @spot.owned_by
+
+    @spot.save
+    render "show.json.jb"
   end
 end
