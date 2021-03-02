@@ -9,5 +9,11 @@ Rails.application.routes.draw do
   namespace :api do
     #index
     get "/skate_spots" => "skate_spots#index"
+    #show
+    get "/skate_spots/:id" => "skate_spots#show"
+    #create
+    post "/skate_spots" => "skate_spots#create"
+    #patch
+    post "/skate_spots/:id" => "skate_spots#patch"
   end
 end
