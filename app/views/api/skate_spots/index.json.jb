@@ -1,0 +1,10 @@
+@spots.map do |spot|
+  {
+    id: spot.id,
+    name: spot.name,
+    location: spot.location,
+    rating: spot.rating,
+    owned_by: spot.owned_by,
+
+  }
+end
