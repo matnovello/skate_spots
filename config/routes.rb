@@ -15,5 +15,7 @@ Rails.application.routes.draw do
     post "/skate_spots" => "skate_spots#create"
     #patch
     post "/skate_spots/:id" => "skate_spots#patch"
+    #delete
+    delete "/skate_spots/:id" => "skate_spots#destroy"
   end
 end

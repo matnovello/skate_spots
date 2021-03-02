@@ -33,4 +33,10 @@ class Api::SkateSpotsController < ApplicationController
     @spot.save
     render "show.json.jb"
   end
+
+  def destroy
+    @spot = Spot.find(params[:id])
+    @spot.destroy
+    render json: { message: "#{@spot.name} with ID of #{@spot.id} has been deleted  " }
+  end
 end
